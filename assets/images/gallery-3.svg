@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a2f"/>
+      <stop offset="100%" stop-color="#0f221a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g3)"/>
+  <g fill="#2d5a45" opacity="0.6">
+    <ellipse cx="160" cy="500" rx="120" ry="160"/>
+    <ellipse cx="280" cy="520" rx="90" ry="140"/>
+    <ellipse cx="560" cy="510" rx="110" ry="150"/>
+    <ellipse cx="680" cy="530" rx="100" ry="130"/>
+  </g>
+  <path d="M400 420 C360 360,340 300,400 220 C460 300,440 360,400 420 Z" fill="#8B1E2D" opacity="0.85"/>
+  <circle cx="400" cy="240" r="8" fill="#D4AF4A"/>
+  <text x="400" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#D4AF4A" letter-spacing="4">GARDEN WALKS</text>
+</svg>

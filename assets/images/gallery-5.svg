@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4a3428"/>
+      <stop offset="100%" stop-color="#2a1810"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g5)"/>
+  <circle cx="340" cy="280" r="70" fill="none" stroke="#D4AF4A" stroke-width="2" opacity="0.7"/>
+  <circle cx="460" cy="280" r="70" fill="none" stroke="#D4AF4A" stroke-width="2" opacity="0.7"/>
+  <text x="400" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#F3E8DC" letter-spacing="8">TOGETHER</text>
+</svg>

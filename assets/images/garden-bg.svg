@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0a0e"/>
+      <stop offset="55%" stop-color="#2c1218"/>
+      <stop offset="100%" stop-color="#1a0a0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="70%" r="45%">
+      <stop offset="0%" stop-color="#8B1E2D" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1a0a0e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <!-- soft silhouettes of foliage -->
+  <g fill="#0d0608" opacity="0.55">
+    <ellipse cx="80" cy="720" rx="140" ry="200"/>
+    <ellipse cx="200" cy="740" rx="100" ry="160"/>
+    <ellipse cx="1000" cy="730" rx="160" ry="190"/>
+    <ellipse cx="1120" cy="750" rx="120" ry="150"/>
+    <ellipse cx="600" cy="780" rx="500" ry="80"/>
+  </g>
+  <!-- faint gold sparkles -->
+  <g fill="#D4AF4A" opacity="0.35">
+    <circle cx="320" cy="180" r="1.5"/>
+    <circle cx="480" cy="120" r="1"/>
+    <circle cx="700" cy="200" r="1.5"/>
+    <circle cx="860" cy="140" r="1"/>
+    <circle cx="540" cy="260" r="1"/>
+    <circle cx="240" cy="240" r="1"/>
+  </g>
+</svg>

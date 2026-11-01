@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Wedding invitation — Bassem & Reem · March 3, 2027"
+    />
+    <title>Bassem & Reem — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="site-controls" aria-label="Site controls">
+      <button
+        type="button"
+        class="ctrl-btn"
+        id="themeToggle"
+        data-i18n-aria="toggleTheme"
+        aria-label="Toggle theme"
+      >
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">☾</span>
+      </button>
+      <button
+        type="button"
+        class="ctrl-btn ctrl-music"
+        id="musicToggle"
+        data-i18n-aria="muteMusic"
+        aria-label="Mute music"
+        aria-pressed="false"
+      >
+        <span class="music-on" aria-hidden="true">♪</span>
+        <span class="music-off" aria-hidden="true">♭</span>
+      </button>
+    </div>
+
+    <!-- ========== Envelope overlay ========== -->
+    <div
+      class="envelope-overlay"
+      id="envelopeOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="envelopeTitle"
+    >
+      <div class="envelope-stage">
+        <header class="envelope-intro">
+          <p class="envelope-kicker" data-i18n="envelopeHaveInvite">You have an invitation</p>
+          <p class="envelope-from" data-i18n="envelopeFrom">from</p>
+          <h1 class="envelope-couple" id="envelopeTitle">
+            <span id="envGroom">Bassem</span>
+            <span class="envelope-amp">&amp;</span>
+            <span id="envBride">Reem</span>
+          </h1>
+        </header>
+
+        <button type="button" class="envelope" id="envelopeBtn" aria-label="Open invitation">
+          <div class="env-back" aria-hidden="true"></div>
+
+          <div class="envelope-card" id="envelopeCard">
+            <p class="card-invite" data-i18n="heroInvite">You are cordially invited</p>
+            <h2 class="card-names">Bassem <span>&amp;</span> Reem</h2>
+            <p class="card-date" id="cardDate">March 3, 2027</p>
+            <p class="card-inside" data-i18n="envelopeInside">With love, Bassem &amp; Reem</p>
+          </div>
+
+          <div class="env-front" aria-hidden="true">
+            <div class="env-pocket"></div>
+          </div>
+
+          <div class="envelope-flap" aria-hidden="true">
+            <div class="flap-inner"></div>
+          </div>
+
+          <div class="wax-seal" aria-hidden="true">
+            <img src="assets/images/wax-seal-br.png" alt="" width="96" height="96" />
+          </div>
+        </button>
+
+        <p class="envelope-hint" data-i18n="envelopeHint">Click to open</p>
+
+        <button
+          type="button"
+          class="btn-open-invite"
+          id="openInviteBtn"
+          data-i18n="openInvite"
+          hidden
+        >
+          Enter Invitation
+        </button>
+      </div>
+    </div>
+
+    <!-- ========== Main site ========== -->
+    <div class="site" id="site" hidden>
+      <header class="site-header is-over-hero" id="siteHeader">
+        <a class="logo" href="#hero" aria-label="Bassem and Reem">
+          <span class="logo-letter">B</span>
+          <span class="logo-heart" aria-hidden="true">♥</span>
+          <span class="logo-letter">R</span>
+        </a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Menu"
+        >
+          <span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Primary">
+          <a href="#welcome" data-i18n="navWelcome">Welcome</a>
+          <a href="#countdown" data-i18n="navDate">Date</a>
+          <a href="#location" data-i18n="navLocation">Location</a>
+          <a href="#story" data-i18n="navStory">Our Story</a>
+          <a href="#gallery" data-i18n="navGallery">Gallery</a>
+          <a href="#guestbook" data-i18n="navGuestbook">Wishes</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="curtains" id="curtains" aria-hidden="true">
+          <div class="curtain-panel curtain-panel-left"></div>
+          <div class="curtain-panel curtain-panel-right"></div>
+          <div class="curtain-valance-photo"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-invite reveal" data-i18n="heroInvite">You are cordially invited</p>
+          <h1 class="hero-names reveal">
+            <span class="name groom" id="groomName">Bassem</span>
+            <span class="ampersand">&amp;</span>
+            <span class="name bride" id="brideName">Reem</span>
+          </h1>
+          <p class="hero-tagline reveal" data-i18n="heroTagline">Are Getting Married</p>
+          <p class="hero-date reveal" id="heroDate">March 3, 2027</p>
+          <div class="hero-ornament reveal" aria-hidden="true">
+            <span>✧</span><span class="hero-ornament-heart">♥</span><span>✧</span>
+          </div>
+        </div>
+
+        <a class="scroll-hint" href="#welcome" data-i18n="scrollHint">Scroll to explore</a>
+      </section>
+
+      <section class="section welcome" id="welcome">
+        <div class="section-inner">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="welcomeTitle">Welcome</h2>
+          <div class="ornament ornament-sm" aria-hidden="true">
+            <span class="ornament-mark">✧</span>
+          </div>
+          <p class="lead" data-i18n="welcomeLead">
+            With joyful hearts, we invite you to celebrate the beginning of our forever.
+          </p>
+          <p class="body-text" data-i18n="welcomeBody">
+            Your presence would mean the world to us as we celebrate and begin this
+            beautiful chapter together.
+          </p>
+          <p class="hope" data-i18n="hopeSeeYou">We hope to see you there…</p>
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❧</span>
+            <span class="ornament-line"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section class="section countdown-section" id="countdown">
+        <div class="countdown-bg" aria-hidden="true"></div>
+        <div class="countdown-veil" aria-hidden="true"></div>
+        <div class="section-inner countdown-inner">
+          <p class="section-kicker">Save the date</p>
+          <h2 class="section-title" data-i18n="countdownTitle">Counting Down to Forever</h2>
+          <div class="ornament ornament-sm" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">✦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <div class="countdown" id="countdownTimer" role="timer" aria-live="polite">
+            <div class="cd-block">
+              <span class="cd-num" id="cdDays">00</span>
+              <span class="cd-label" data-i18n="countdownDays">Days</span>
+            </div>
+            <div class="cd-block">
+              <span class="cd-num" id="cdHours">00</span>
+              <span class="cd-label" data-i18n="countdownHours">Hours</span>
+            </div>
+            <div class="cd-block">
+              <span class="cd-num" id="cdMins">00</span>
+              <span class="cd-label" data-i18n="countdownMins">Minutes</span>
+            </div>
+            <div class="cd-block">
+              <span class="cd-num" id="cdSecs">00</span>
+              <span class="cd-label" data-i18n="countdownSecs">Seconds</span>
+            </div>
+          </div>
+          <p class="countdown-done" id="countdownDone" data-i18n="countdownDone" hidden>
+            Today is the day!
+          </p>
+        </div>
+      </section>
+
+      <section class="section date-section section-light" id="date">
+        <div class="bg-ornaments bg-ornaments-celestial" aria-hidden="true">
+          <span class="orbit"></span>
+        </div>
+        <div class="section-inner">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="dateTitle">The Day</h2>
+          <p class="section-sub" data-i18n="dateSubtitle">
+            Save the date — we can't wait to celebrate with you.
+          </p>
+          <p class="big-date" id="bigDate">March 3, 2027</p>
+          <p class="big-time" id="bigTime">6:00 PM</p>
+          <div class="ornament ornament-sm" aria-hidden="true">
+            <span class="ornament-mark">✧ · ✧</span>
+          </div>
+          <div class="dress-code">
+            <span class="dress-label" data-i18n="dressCodeLabel">Dress Code</span>
+            <p id="dressCodeText"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section location-section" id="location">
+        <div class="section-inner wide">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="locationTitle">Where We'll Meet</h2>
+          <p class="section-sub" data-i18n="locationSubtitle">
+            Join us at a place of gardens, candlelight and joy.
+          </p>
+
+          <div class="location-layout">
+            <figure class="venue-preview">
+              <div class="venue-preview-frame venue-gold-frame">
+                <img
+                  class="venue-frame-border"
+                  src="assets/images/venue-frame-gold-clear.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div class="venue-frame-photo">
+                  <img
+                    id="venuePreviewImg"
+                    src="assets/images/venue-preview.svg"
+                    alt="Wedding venue preview"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </figure>
+
+            <div class="venue-card">
+              <span class="venue-ornament" aria-hidden="true">❖</span>
+              <h3 class="venue-name" id="venueName"></h3>
+              <p class="venue-address" id="venueAddress"></p>
+              <a
+                class="btn btn-gold"
+                id="mapLink"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="getDirections"
+                >Get Directions</a
+              >
+            </div>
+          </div>
+
+          <div class="map-wrap" id="mapWrap" hidden>
+            <iframe
+              id="mapEmbed"
+              title="Venue map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story-section" id="story">
+        <div class="story-glow" aria-hidden="true"></div>
+
+        <!-- Realistic candles -->
+        <div class="candle-stage candle-stage-left" aria-hidden="true">
+          <div class="real-candle tall">
+            <div class="candle-glow"></div>
+            <div class="candle-flame">
+              <div class="flame-outer"></div>
+              <div class="flame-inner"></div>
+              <div class="flame-core"></div>
+            </div>
+            <div class="candle-wick"></div>
+            <div class="candle-wax">
+              <span class="wax-drip d1"></span>
+              <span class="wax-drip d2"></span>
+            </div>
+            <div class="candle-holder"></div>
+          </div>
+          <div class="real-candle short">
+            <div class="candle-glow"></div>
+            <div class="candle-flame">
+              <div class="flame-outer"></div>
+              <div class="flame-inner"></div>
+              <div class="flame-core"></div>
+            </div>
+            <div class="candle-wick"></div>
+            <div class="candle-wax">
+              <span class="wax-drip d1"></span>
+            </div>
+            <div class="candle-holder"></div>
+          </div>
+        </div>
+
+        <div class="candle-stage candle-stage-right" aria-hidden="true">
+          <div class="real-candle short">
+            <div class="candle-glow"></div>
+            <div class="candle-flame">
+              <div class="flame-outer"></div>
+              <div class="flame-inner"></div>
+              <div class="flame-core"></div>
+            </div>
+            <div class="candle-wick"></div>
+            <div class="candle-wax">
+              <span class="wax-drip d1"></span>
+            </div>
+            <div class="candle-holder"></div>
+          </div>
+          <div class="real-candle tall">
+            <div class="candle-glow"></div>
+            <div class="candle-flame">
+              <div class="flame-outer"></div>
+              <div class="flame-inner"></div>
+              <div class="flame-core"></div>
+            </div>
+            <div class="candle-wick"></div>
+            <div class="candle-wax">
+              <span class="wax-drip d1"></span>
+              <span class="wax-drip d2"></span>
+            </div>
+            <div class="candle-holder"></div>
+          </div>
+        </div>
+
+        <div class="section-inner story-inner">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="storyTitle">Our Love Story</h2>
+          <p class="section-sub" data-i18n="storySubtitle">A few chapters from the beginning…</p>
+          <ol class="timeline" id="timeline"></ol>
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❧</span>
+            <span class="ornament-line"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="gallery-backdrop" aria-hidden="true"></div>
+        <div class="section-inner wide">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="galleryTitle">Moments We Cherish</h2>
+          <p class="section-sub" data-i18n="gallerySubtitle">
+            A glimpse into our journey together.
+          </p>
+
+          <figure class="gallery-collage gallery-ornament-hero" id="galleryCollage" hidden>
+            <div class="ornament-frame-wrap">
+              <img
+                class="ornament-frame-ring"
+                src="assets/images/gallery-ornament-frame-clear.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="ornament-frame-photo">
+                <img src="" alt="" id="galleryCollageImg" />
+              </div>
+            </div>
+            <figcaption class="gallery-collage-caption" data-i18n="galleryCollageCaption">
+              Our favorite moments
+            </figcaption>
+          </figure>
+
+          <p class="gallery-grid-label" aria-hidden="true">
+            <span class="ornament-mark">✧</span>
+          </p>
+          <div class="gallery-mosaic" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <div class="lightbox" id="lightbox" hidden>
+        <button
+          type="button"
+          class="lightbox-close"
+          id="lightboxClose"
+          data-i18n-aria="galleryClose"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
+          ‹
+        </button>
+        <figure class="lightbox-stage">
+          <img id="lightboxImg" alt="" />
+          <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
+          ›
+        </button>
+      </div>
+
+      <section class="section guestbook-section" id="guestbook">
+        <div class="wish-corner-ornaments" aria-hidden="true">
+          <img class="wish-corner bl" src="assets/images/corner-ornament-gold-clear.png" alt="" />
+          <img class="wish-corner br" src="assets/images/corner-ornament-gold-clear.png" alt="" />
+        </div>
+        <div class="section-inner">
+          <div class="ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">❦</span>
+            <span class="ornament-line"></span>
+          </div>
+          <h2 class="section-title" data-i18n="guestbookTitle">Leave a Wish</h2>
+          <p class="section-sub" data-i18n="guestbookSubtitle">
+            Share a happy message — everyone can read it.
+          </p>
+
+          <form class="wish-form" id="wishForm" novalidate>
+            <label class="sr-only" for="wishName" data-i18n="guestbookName">Your name</label>
+            <input
+              type="text"
+              id="wishName"
+              name="name"
+              required
+              maxlength="60"
+              data-i18n-placeholder="guestbookName"
+              placeholder="Your name"
+            />
+            <label class="sr-only" for="wishMessage" data-i18n="guestbookMessage"
+              >Your happy message…</label
+            >
+            <textarea
+              id="wishMessage"
+              name="message"
+              required
+              maxlength="400"
+              rows="3"
+              data-i18n-placeholder="guestbookMessage"
+              placeholder="Your happy message…"
+            ></textarea>
+            <button type="submit" class="btn btn-crimson" data-i18n="guestbookSubmit">
+              Send Wish
+            </button>
+            <p class="form-status" id="wishStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="wishes" id="wishesList"></div>
+          <nav class="wishes-pagination" id="wishesPagination" hidden aria-label="Wishes pages">
+            <button type="button" class="wishes-page-btn" id="wishesPrev" aria-label="Previous page">
+              ‹
+            </button>
+            <p class="wishes-page-info" id="wishesPageInfo">1 / 1</p>
+            <button type="button" class="wishes-page-btn" id="wishesNext" aria-label="Next page">
+              ›
+            </button>
+          </nav>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="ornament ornament-footer" aria-hidden="true">
+          <span class="ornament-line"></span>
+          <span class="ornament-mark">❦</span>
+          <span class="ornament-line"></span>
+        </div>
+        <p class="footer-blessing" data-i18n="footerBlessing">With love &amp; gratitude</p>
+        <p class="footer-names" data-i18n="footerNames">Bassem &amp; Reem</p>
+        <p class="footer-date" id="footerDate">03 · 03 · 2027</p>
+        <div class="ornament ornament-sm ornament-footer" aria-hidden="true">
+          <span class="ornament-mark">✧</span>
+        </div>
+      </footer>
+    </div>
+
+    <audio
+      id="bgMusic"
+      src="assets/music/royal-waltz.mp3"
+      loop
+      preload="auto"
+      playsinline
+    ></audio>
+
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

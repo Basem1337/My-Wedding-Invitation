@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1818"/>
+      <stop offset="55%" stop-color="#5c3030"/>
+      <stop offset="100%" stop-color="#1a1010"/>
+    </linearGradient>
+    <linearGradient id="hall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0e4d0"/>
+      <stop offset="100%" stop-color="#c9b08a"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6b121c"/>
+      <stop offset="100%" stop-color="#3d0a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <!-- soft garden silhouettes -->
+  <ellipse cx="120" cy="780" rx="160" ry="220" fill="#0f1a12" opacity="0.55"/>
+  <ellipse cx="680" cy="800" rx="180" ry="240" fill="#0f1a12" opacity="0.5"/>
+  <ellipse cx="400" cy="920" rx="420" ry="120" fill="#0a120c" opacity="0.45"/>
+  <!-- venue building -->
+  <rect x="180" y="380" width="440" height="420" fill="url(#hall)"/>
+  <polygon points="160,380 400,220 640,380" fill="url(#roof)"/>
+  <!-- columns -->
+  <rect x="220" y="420" width="36" height="300" fill="#e8dcc4"/>
+  <rect x="320" y="420" width="36" height="300" fill="#e8dcc4"/>
+  <rect x="444" y="420" width="36" height="300" fill="#e8dcc4"/>
+  <rect x="544" y="420" width="36" height="300" fill="#e8dcc4"/>
+  <!-- doorway -->
+  <path d="M360 560 H440 V780 H360 Z" fill="#3d0a12"/>
+  <path d="M360 560 Q400 500 440 560" fill="#5c1018"/>
+  <!-- gold accents -->
+  <rect x="200" y="400" width="400" height="6" fill="#d4af4a" opacity="0.75"/>
+  <circle cx="400" cy="300" r="10" fill="#d4af4a"/>
+  <!-- warm windows -->
+  <rect x="250" y="480" width="28" height="40" fill="#f4d58a" opacity="0.85"/>
+  <rect x="522" y="480" width="28" height="40" fill="#f4d58a" opacity="0.85"/>
+  <text x="400" y="860" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#d4af4a" letter-spacing="4" opacity="0.85">THE ROYAL GARDEN</text>
+</svg>

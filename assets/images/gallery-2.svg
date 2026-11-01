@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#2a1810"/>
+      <stop offset="100%" stop-color="#5c4336"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g2)"/>
+  <ellipse cx="400" cy="380" rx="180" ry="40" fill="#1a0a0e" opacity="0.35"/>
+  <!-- candle -->
+  <rect x="388" y="260" width="24" height="100" fill="#F2E6C9"/>
+  <ellipse cx="400" cy="250" rx="10" ry="18" fill="#FFB347"/>
+  <ellipse cx="400" cy="245" rx="4" ry="8" fill="#FFF6C8"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#D4AF4A" letter-spacing="4">A QUIET EVENING</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0a0e"/>
+      <stop offset="100%" stop-color="#5c0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g6)"/>
+  <text x="400" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#D4AF4A" letter-spacing="8">03 . 03 . 2027</text>
+  <line x1="300" y1="300" x2="500" y2="300" stroke="#D4AF4A" stroke-width="1" opacity="0.5"/>
+  <text x="400" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F3E8DC" opacity="0.85">Forever Begins</text>
+</svg>
